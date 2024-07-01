@@ -3,7 +3,7 @@
 ?>
 
 <h1>Inserir Pessoa</h1>
-<form method="post" action="../controllers/PessoaController.php?action=insert">
+<form method="post" action="../controller/PessoaController.php?action=insert">
     <label for="name">Nome:</label>
     <input type="text" id="name" name="name" required><br><br>
     

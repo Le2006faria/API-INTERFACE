@@ -1,8 +1,8 @@
 <?php
 // src/controllers/PessoaController.php
 
-include_once '../models/Database.php';
-include_once '../models/Pessoa.php';
+include_once '../model/Database.php';
+include_once '../model/Pessoa.php';
 
 class PessoaController {
     private $db;
@@ -21,9 +21,9 @@ class PessoaController {
             $gender = $_POST['gender'];
 
             if ($this->pessoa->insert($name, $age, $sex, $gender)) {
-                header("Location: ../views/index.php?msg=success");
+                header("Location: ../view/index.php?msg=success");
             } else {
-                header("Location: ../views/index.php?msg=error");
+                header("Location: ../view/form.php?msg=error");
             }
         }
     }
@@ -37,9 +37,9 @@ class PessoaController {
             $gender = $_POST['gender'];
 
             if ($this->pessoa->update($id, $name, $age, $sex, $gender)) {
-                header("Location: ../views/index.php?msg=updated");
+                header("Location: ../view/index.php?msg=updated");
             } else {
-                header("Location: ../views/update.php?id=$id&msg=error");
+                header("Location: ../view/update.php?id=$id&msg=error");
             }
         } else {
             $id = $_GET['id'];
@@ -52,9 +52,9 @@ class PessoaController {
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
             if ($this->pessoa->delete($id)) {
-                header("Location: ../views/index.php?msg=deleted");
+                header("Location: ../view/index.php?msg=deleted");
             } else {
-                header("Location: ../views/index.php?msg=error");
+                header("Location: ../view/index.php?msg=error");
             }
         }
     }

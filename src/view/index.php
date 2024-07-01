@@ -1,7 +1,7 @@
 <?php
 // src/views/index.php
 
-include_once '../controllers/PessoaController.php';
+include_once '../controller/PessoaController.php';
 $pessoaController = new PessoaController();
 $pessoas = $pessoaController->list();
 
@@ -9,6 +9,7 @@ $message = isset($_GET['msg']) ? $_GET['msg'] : '';
 ?>
 
 <?php include 'header.php'; ?>
+<?php include 'footer.php'; ?>
 
 <?php if ($message == 'success'): ?>
     <p>Nova pessoa inserida com sucesso!</p>
@@ -20,7 +21,6 @@ $message = isset($_GET['msg']) ? $_GET['msg'] : '';
     <p>Pessoa excluída com sucesso!</p>
 <?php endif; ?>
 
-<?php include 'form.php'; ?>
 
 <h1>Lista de Pessoas</h1>
 <table border="1">
@@ -53,4 +53,6 @@ $message = isset($_GET['msg']) ? $_GET['msg'] : '';
     ?>
 </table>
 
+<?php include 'header.php'; ?>
+<?php include 'form.php'; ?>
 <?php include 'footer.php'; ?>

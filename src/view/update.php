@@ -1,7 +1,7 @@
 <?php
 // src/views/update.php
 
-include_once '../controllers/PessoaController.php';
+include_once '../controller/PessoaController.php';
 $pessoaController = new PessoaController();
 $pessoa = $pessoaController->update();
 ?>
@@ -13,7 +13,7 @@ $pessoa = $pessoaController->update();
 <?php endif; ?>
 
 <h1>Atualizar Pessoa</h1>
-<form method="post" action="../controllers/PessoaController.php?action=update">
+<form method="post" action="../controller/PessoaController.php?action=update">
     <input type="hidden" name="id" value="<?php echo $pessoa['id']; ?>">
     <label for="name">Nome:</label>
     <input type="text" id="name" name="name" value="<?php echo $pessoa['nome']; ?>" required><br><br>
