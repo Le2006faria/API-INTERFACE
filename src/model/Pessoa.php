@@ -8,8 +8,8 @@ class Pessoa {
         $this->conn = $db;
     }
 
-    public function insert($name, $age, $sex, $gender) {
-        $sql = "INSERT INTO pessoas (nome, idade, sexo, genero) VALUES ('$name', '$age', '$sex', '$gender')";
+    public function insert($name, $age, $sex, $email) {
+        $sql = "INSERT INTO pessoas (nome, idade, sexo, email) VALUES ('$name', '$age', '$sex', '$email')";
         return $this->conn->query($sql);
     }
 
@@ -23,8 +23,8 @@ class Pessoa {
         return $this->conn->query($sql);
     }
 
-    public function update($id, $name, $age, $sex, $gender) {
-        $sql = "UPDATE pessoas SET nome='$name', idade='$age', sexo='$sex', genero='$gender' WHERE id='$id'";
+    public function update($id, $name, $age, $sex, $email) {
+        $sql = "UPDATE pessoas SET nome='$name', idade='$age', sexo='$sex', email='$email' WHERE id='$id'";
         return $this->conn->query($sql);
     }
 

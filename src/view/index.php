@@ -29,7 +29,7 @@ $message = isset($_GET['msg']) ? $_GET['msg'] : '';
         <th>Nome</th>
         <th>Idade</th>
         <th>Sexo</th>
-        <th>Gênero</th>
+        <th>Email</th>
         <th>Ações</th>
     </tr>
     <?php
@@ -40,7 +40,7 @@ $message = isset($_GET['msg']) ? $_GET['msg'] : '';
             echo "<td>" . $row["nome"] . "</td>";
             echo "<td>" . $row["idade"] . "</td>";
             echo "<td>" . $row["sexo"] . "</td>";
-            echo "<td>" . $row["genero"] . "</td>";
+            echo "<td>" . $row["email"] . "</td>";
             echo "<td>
                     <a href='update.php?id=" . $row["id"] . "'>Editar</a>
                     <a href='delete.php?id=" . $row["id"] . "'>Excluir</a>

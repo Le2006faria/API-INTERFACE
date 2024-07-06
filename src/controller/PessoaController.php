@@ -18,9 +18,9 @@ class PessoaController {
             $name = $_POST['name'];
             $age = $_POST['age'];
             $sex = $_POST['sex'];
-            $gender = $_POST['gender'];
+            $email = $_POST['email'];
 
-            if ($this->pessoa->insert($name, $age, $sex, $gender)) {
+            if ($this->pessoa->insert($name, $age, $sex, $email)) {
                 header("Location: ../view/index.php?msg=success");
             } else {
                 header("Location: ../view/form.php?msg=error");
@@ -34,9 +34,9 @@ class PessoaController {
             $name = $_POST['name'];
             $age = $_POST['age'];
             $sex = $_POST['sex'];
-            $gender = $_POST['gender'];
+            $email = $_POST['email'];
 
-            if ($this->pessoa->update($id, $name, $age, $sex, $gender)) {
+            if ($this->pessoa->update($id, $name, $age, $sex, $email)) {
                 header("Location: ../view/index.php?msg=updated");
             } else {
                 header("Location: ../view/update.php?id=$id&msg=error");

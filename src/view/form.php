@@ -13,8 +13,8 @@
     <label for="sex">Sexo:</label>
     <input type="text" id="sex" name="sex" required><br><br>
     
-    <label for="gender">Gênero:</label>
-    <input type="text" id="gender" name="gender" required><br><br>
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" required><br><br>
     
     <input type="submit" name="insert" value="Inserir">
 </form>

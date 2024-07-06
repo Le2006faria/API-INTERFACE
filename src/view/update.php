@@ -24,8 +24,8 @@ $pessoa = $pessoaController->update();
     <label for="sex">Sexo:</label>
     <input type="text" id="sex" name="sex" value="<?php echo $pessoa['sexo']; ?>" required><br><br>
     
-    <label for="gender">Gênero:</label>
-    <input type="text" id="gender" name="gender" value="<?php echo $pessoa['genero']; ?>" required><br><br>
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" value="<?php echo $pessoa['email']; ?>" required><br><br>
     
     <input type="submit" name="update" value="Atualizar">
 </form>
